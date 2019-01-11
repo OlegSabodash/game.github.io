@@ -38,7 +38,8 @@ class Сharacters extends React.Component {
             sound: null,
             healthEnemy: 0,
             healthHero: 0,
-            game: false
+            game: false,
+            musicAttack: false
         }
     }
 
@@ -47,6 +48,9 @@ class Сharacters extends React.Component {
         if (result !== undefined) {
             clearInterval(this.drawCharacters);
             clearInterval(this.breathInterval);
+            this.setState(() => ({
+                musicAttack: true
+            }));
             this.img['attack'] = new Image();
             this.img['attack'].src = './images/attack.png';
             this.img['attack'].onload = () => {
@@ -78,6 +82,9 @@ class Сharacters extends React.Component {
         promise.then(() => {
             this.drawCharacters = setInterval(() => { this.redraw() }, 100);
             this.breathInterval = setInterval(() => { this.updateBreath() }, 100);
+            this.setState(() => ({
+                musicAttack: false
+            }));
         })
     }
 
@@ -264,6 +271,7 @@ class Сharacters extends React.Component {
         this.answer();
         return (
             <div>
+                {(this.state.musicAttack)? <audio src='./ringtones/attack.mp3' autoPlay></audio> : null}
                 <Health round={this.props.rounds} health={this.healthChange.bind(this)} newRound={this.changeRound.bind(this)} healthEnemy={this.state.healthEnemy} healthHero={this.state.healthHero} />
                 <div className="wrapperForCanvas flex">
                     <div>
