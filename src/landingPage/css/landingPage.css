@@ -1,0 +1,337 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+@font-face{
+    font-family: lato-Medium;
+    src: url(./fonts/Lato-Medium.ttf);
+}
+@font-face{
+    font-family: nowharehouse;
+    src: url(./fonts/Nowharehouse.ttf);
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-family: lato-Medium;
+
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    min-height: 600px;
+    background: url('../imagesBackground/backgroundNameGame.jpg');
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to bottom, #cf112b, #ffffff00);
+}
+.topHead{
+    display: flex;
+    width: 70%;
+    /* border: 2px solid white; */
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.menu a{
+    font-size: 20px;
+}
+
+.logo{
+    display: flex;
+    font-family: nowharehouse;
+    letter-spacing: 3px;
+    font-size: 15px;
+    width: 20%;
+    justify-content: space-around;
+}
+
+.startGame{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35vh;
+}
+.startGame h1{
+    font-family: nowharehouse;
+    font-size: 50px;
+}
+.startGame div{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonStartGame{
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 80px #cf112b;
+    outline: unset;
+}
+
+.buttonStartGame a{
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+    font-family: lato-Medium;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200vh;
+}
+.historyBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background: url('../imagesBackground/backgroundHistory.gif');
+    background-size: cover; 
+    background-position: 50% 50%;  
+}
+.widthForBlockHistory{
+    width: 25%;
+}
+
+.firstPartHistory, .secondPartHistory{
+    background-color: rgba(25, 25, 25, 0.8);
+    height: 70%;
+    margin: 0 40px;
+    color: #cf112b;
+    font-size: 20px;
+    font-family: lato-Medium;
+    padding: 20px;
+}
+
+.screenshots{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(25, 25, 25);
+}
+.firstRow, .secondRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 85%;
+    height: 42.5%;
+}
+.firstRow{
+    margin-top: 2.5%; 
+}
+
+.secondRow{
+    margin-bottom: 2.5%; 
+}
+.screenshotRegistration, .screenshotStartGame,
+.screenshotFieldOfTasks, .screenshotTableUsers{
+    width: 45%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.screenshotStartGame{
+    background-image: url('../gif/gameplay.gif'); 
+}
+.screenshotFieldOfTasks{
+    background-image: url('../gif/hero.gif'); 
+}
+
+.screenshotTableUsers{
+    background-image: url('../gif/menuGame.gif'); 
+}
+
+.screenshotRegistration{
+    background-image: url('../gif/registration.gif'); 
+}
+.screenshots p {
+    text-align: center;
+}
+
+.legendFieldRegistration, .legendFieldStarGame,
+.legendFieldTasks, .legendFieldUsers{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-family: lato-Medium;
+    font-size: 30px;
+}
+
+.legendFieldRegistration, .legendFieldUsers{
+    background-color: rgba(207, 17, 43, 0.5);
+}
+
+.legendFieldTasks, .legendFieldStarGame{
+    background-color: rgba(25, 25, 25, 0.5);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imagesBackground/backgroundFooter.png');
+    background-size: 600px; 
+    background-repeat: no-repeat; 
+    background-position: right bottom;
+}
+
+.wrapperFooter{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    font-family: lato-Medium;
+}
+
+.inf-me{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 10px 0px;
+}
+.inf-me i {
+    color: #cf112b;
+}
+
+@media screen and (max-width: 1400px){
+    .widthForBlockHistory{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .widthForBlockHistory{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .widthForBlockHistory{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .widthForBlockHistory{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .menu{
+        width: 60%;
+    }
+
+    .buttonStartGame{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        
+    }
+    .startGame h1{
+        font-size: 40px;
+    }
+    .buttonStartGame a{
+        font-size: 20px;
+    }
+    .widthForBlockHistory{
+        font-size: 15px;
+    }
+    footer{
+        background-size: 500px; 
+    }
+    .wrapperFooter{
+        font-size: 25px;
+    }
+    
+    .inf-me{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .widthForBlockHistory{
+        width: 30%;
+    }
+
+    footer{
+        align-items: unset;
+    }
+    .wrapperFooter{
+        margin-top: 100px;
+        margin-left: 60px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .startGame{
+        margin-top: 70vh;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .topHead{
+        width: 100%;
+    }
+
+    .buttonStartGame{
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        
+    }
+    .buttonStartGame a{
+        font-size: 15px;
+    }
+    .startGame h1{
+        font-size: 30px;
+    }
+
+    .widthForBlockHistory{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .widthForBlockHistory{
+        font-size: 13px;
+    }
+}
